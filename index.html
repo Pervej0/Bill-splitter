@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Splitter</title>
+    <!-- tailwin cdn -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-mono bg-gray-300 h-screen flex items-center">
+    <section class="w-4/6 mx-auto rounded-4 p-10 bg-yellow-50 rounded-2xl">
+      <div class="flex">
+        <div class="w-2/4 mr-16">
+          <!-- billing input -->
+          <h3 class="text-xl mb-3 font-bold">Bill</h3>
+          <input
+            class="
+              border-l border-b
+              rounded
+              border-black
+              w-full
+              h-12
+              px-2
+              bg-transparent
+              text-right text-xl
+            "
+            type="number"
+            value="0"
+            min="0"
+            max="1000000"
+            placeholder="$"
+            id="bill-input"
+            name="bill"
+          />
+          <!-- tip rate -->
+          <h3 class="text-xl mb-3 font-bold mt-8">
+            Select Tip <span class="text-gray-600">%</span>
+          </h3>
+          <div id="tipBtn-box">
+            <button
+              class="
+                bg-green-200
+                px-6
+                py-2
+                rounded-xl
+                text-xl
+                font-bold
+                mr-5
+                mb-5
+              "
+            >
+              5%
+            </button>
+            <button
+              class="
+                bg-green-200
+                px-6
+                py-2
+                rounded-xl
+                text-xl
+                font-bold
+                mr-5
+                mb-5
+              "
+            >
+              10%
+            </button>
+            <button
+              class="
+                bg-green-200
+                px-6
+                py-2
+                rounded-xl
+                text-xl
+                font-bold
+                mr-5
+                mb-5
+              "
+            >
+              15%
+            </button>
+            <button
+              class="
+                bg-green-200
+                px-6
+                py-2
+                rounded-xl
+                text-xl
+                font-bold
+                mr-5
+                mb-5
+              "
+            >
+              25%
+            </button>
+            <button
+              class="
+                bg-green-200
+                px-6
+                py-2
+                rounded-xl
+                text-xl
+                font-bold
+                mr-5
+                mb-5
+              "
+            >
+              50%
+            </button>
+            <input
+              class="placeholder-gray-500 font-bold w-28 h-12 px-2"
+              type="number"
+              placeholder="Custom"
+              id="custom-input"
+            />
+          </div>
+          <!-- Number of people -->
+          <h3 class="text-xl mb-3 font-bold mt-5">Number of people</h3>
+          <input
+            class="
+              border-l border-b
+              rounded
+              border-black
+              w-full
+              h-12
+              px-2
+              bg-transparent
+              text-right text-xl
+            "
+            type="number"
+            value="1"
+            min="1"
+            max="10000"
+            placeholder="$"
+            id="people-input"
+            name="people"
+          />
+        </div>
+
+        <!-- tip amount -->
+        <div class="rounded-xl bg-red-900 p-12 w-2/4">
+          <div class="flex justify-between mb-16">
+            <div class="text-white">
+              <p class="font-semibold">Tip Amount</p>
+              <p class="text-gray-400">/ Person</p>
+            </div>
+            <div>
+              <h1 class="text-white text-5xl">
+                $<span class="text-4xl" id="tip-amount">0.00</span>
+              </h1>
+            </div>
+          </div>
+          <div class="flex justify-between mb-16">
+            <div class="text-white">
+              <p class="font-semibold">Total</p>
+              <p class="text-gray-400">/ Person</p>
+            </div>
+            <div>
+              <h1 class="text-white text-5xl">
+                $<span class="text-4xl" id="total-poeple">0.00</span>
+              </h1>
+            </div>
+          </div>
+          <button
+            class="
+              w-full
+              py-3
+              uppercase
+              bg-yellow-100
+              font-bold
+              text-3xl
+              rounded-xl
+              text-gray-700
+            "
+            id="clickFun"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- custom script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
